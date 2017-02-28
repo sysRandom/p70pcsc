@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("p70pcsc", "for p70pcsc support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("p70pcsc", "enable p70pcsc support", "no");
+
+if (PHP_P70PCSC != "no") {
+	EXTENSION("p70pcsc", "p70pcsc.c", PHP_EXTNAME_SHARED, "/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1");
+}
+
